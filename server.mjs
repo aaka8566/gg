@@ -39,7 +39,7 @@ app.post('/postings', (req, res) => {
 app.post('/users', (req, res) => {
   const dataa=req.body;
   
-fetchit();
+
 const fetchit=async()=>{
   try{
       let res=await fetch(`https://strange-foal-turtleneck-shirt.cyclic.app/postings`);
@@ -55,7 +55,7 @@ const fetchit=async()=>{
       console.log(er)
   }
 }
-
+fetchit();
 
   
 
