@@ -32,7 +32,7 @@ app.get('/postings', (req, res) => {
 });
 app.post('/postings', (req, res) => {
   const dat=req.body;
-  posts.postings.push(dat);
+  posts.users.push(dat);
   res.send(posts)
 });
 //check and login
