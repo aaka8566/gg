@@ -26,7 +26,7 @@ app.get('/tar', (req, res) => {
   res.send('Hello World!')
 });
 app.get('/postings', (req, res) => {
-  res.send('Hello World!')
+  res.send(posts)
 });
 
 app.listen(port, () => {
