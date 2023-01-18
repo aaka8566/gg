@@ -40,7 +40,7 @@ app.post('/users', (req, res) => {
   const dataa=req.body;
   
   const found=false;
-  posts.map((el)=>{
+  posts.users.map((el)=>{
 if(el.email===dataa.email && el.password===dataa.password){
 const found=el;
 res.send(found);
