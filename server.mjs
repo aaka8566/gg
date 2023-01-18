@@ -30,7 +30,7 @@ app.get('/postings', (req, res) => {
 });
 app.post('/postings', (req, res) => {
   const {dat}=req.body;
-  posts.push(dat);
+  posts.postings.push(dat);
   res.send(posts)
 });
 
