@@ -42,9 +42,8 @@ app.post('/users', async(req, res) => {
 
 
   try{
-      let res=await fetch(`https://strange-foal-turtleneck-shirt.cyclic.app/postings`);
-       let res1=await res.json();
-       res1.users.map((el)=>{
+     
+       posts.users.map((el)=>{
         if(el.email===dataa.email && el.password===dataa.password){
         const found=el;
         return res.send(found);
