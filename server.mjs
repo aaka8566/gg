@@ -5,7 +5,11 @@ const port =process.env.PORT|| 8000;
 
 // 
 app.use(cors());
-
+const posts={
+  "postings": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+}
 const dataa={
   "posts": [
     { "id": 1, "title": "json-server", "author": "typicode" }
@@ -20,7 +24,10 @@ app.get('/', (req, res) => {
 });
 app.get('/tar', (req, res) => {
   res.send('Hello World!')
-})
+});
+app.get('/postings', (req, res) => {
+  res.send('Hello World!')
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
