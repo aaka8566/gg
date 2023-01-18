@@ -39,13 +39,26 @@ app.post('/postings', (req, res) => {
 app.post('/users', (req, res) => {
   const dataa=req.body;
   
-  const found=false;
-  posts.users.map((el)=>{
-if(el.email===dataa.email && el.password===dataa.password){
-const found=el;
-return res.send(found.token);
+fetchit();
+const fetchit=async()=>{
+  try{
+      let res=await fetch(`https://strange-foal-turtleneck-shirt.cyclic.app/postings`);
+       let res1=await res.json();
+       res1.users.map((el)=>{
+        if(el.email===dataa.email && el.password===dataa.password){
+        const found=el;
+        return res.send(found.token);
+        }
+          })
+  }
+  catch(er){
+      console.log(er)
+  }
 }
-  })
+
+
+  
+
   return res.send("no user found")
   
 });
