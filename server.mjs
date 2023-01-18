@@ -6,8 +6,8 @@ app.use(express.json());
 // 
 app.use(cors());
 const posts={
-  "postings": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "users": [
+    { "id": 1, "name": "Aakash", "email": "aakash8566@gmail.com","password":"aaki","token":"2287" }
   ],
 }
 const dataa={
