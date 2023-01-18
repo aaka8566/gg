@@ -25,6 +25,9 @@ app.get('/', (req, res) => {
 app.get('/tar', (req, res) => {
   res.send('Hello World!')
 });
+app.get('/postings', (req, res) => {
+  res.send(posts);
+});
 app.post('/postings', (req, res) => {
   const {dat}=req.body;
   posts.push(dat);
