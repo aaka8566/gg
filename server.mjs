@@ -1,6 +1,10 @@
 import express from "express"
 const app = express()
 const port =process.env.PORT|| 3000;
+var cors = require('cors');
+// 
+app.use(cors());
+
 const dataa={
   "posts": [
     { "id": 1, "title": "json-server", "author": "typicode" }
