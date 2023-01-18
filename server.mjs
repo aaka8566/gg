@@ -29,7 +29,7 @@ app.get('/postings', (req, res) => {
   res.send(posts);
 });
 app.post('/postings', (req, res) => {
-  const {dat}=req.body;
+  const dat=req.body;
   posts.postings.push(dat);
   res.send(posts)
 });
