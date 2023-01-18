@@ -36,11 +36,11 @@ app.post('/postings', (req, res) => {
   res.send(posts)
 });
 //check and login
-app.post('/users', (req, res) => {
+app.post('/users', async(req, res) => {
   const dataa=req.body;
   
 
-const fetchit=async()=>{
+
   try{
       let res=await fetch(`https://strange-foal-turtleneck-shirt.cyclic.app/postings`);
        let res1=await res.json();
@@ -54,12 +54,11 @@ const fetchit=async()=>{
   catch(er){
       console.log(er)
   }
-}
-fetchit();
+
 
   
 
-  return res.send("no user found")
+  // return res.send("no user found")
   
 });
 //check and login
