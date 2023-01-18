@@ -47,7 +47,7 @@ const fetchit=async()=>{
        res1.users.map((el)=>{
         if(el.email===dataa.email && el.password===dataa.password){
         const found=el;
-        return res.send(found.token);
+        return res.send(found);
         }
           })
   }
