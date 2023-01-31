@@ -1,8 +1,9 @@
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose";
 const app = express()
 const port =process.env.PORT|| 8000;
-const mongoose=require("mongoose");
+
 
 
 // 
@@ -39,9 +40,17 @@ app.post('/postings', (req, res) => {
   res.send(posts)
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-});
+
+mongoose.connect("mongodb+srv://aakash8566:<8566aakash>@cluster0.t7eunpk.mongodb.net/?retryWrites=true&w=majority")
+.then(()=>{
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  });
+  
+})
+.catch((er)=>{
+  console.log(er);
+})
 
 
 
