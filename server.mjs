@@ -39,7 +39,7 @@ app.post('/postings', (req, res) => {
   posts.users.push(dat);
   res.send(posts)
 });
-// ?hello
+
 
 mongoose.connect("mongodb+srv://aakash8566:<8566aakash>@cluster0.t7eunpk.mongodb.net/?retryWrites=true&w=majority")
 .then(()=>{
