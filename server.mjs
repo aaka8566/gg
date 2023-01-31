@@ -40,8 +40,8 @@ app.post('/postings', (req, res) => {
   res.send(posts)
 });
 
-
-mongoose.connect("mongodb+srv://aakash8566:<8566aakash>@cluster0.t7eunpk.mongodb.net/?retryWrites=true&w=majority")
+mongoose.set('strictQuery', false);
+mongoose.connect("mongodb+srv://aakash8566:8566aakash@cluster0.t7eunpk.mongodb.net/?retryWrites=true&w=majority")
 .then(()=>{
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
