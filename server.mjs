@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 const app = express()
 const port =process.env.PORT|| 8000;
+const mongoose=require("mongoose");
+
 
 // 
 app.use(cors());
@@ -36,32 +38,14 @@ app.post('/postings', (req, res) => {
   posts.users.push(dat);
   res.send(posts)
 });
-//check and login
-app.post('/users', async(req, res) => {
-  const dataa=req.body;
-  
 
-
-  try{
-     
-       posts.users.map((el)=>{
-        if(el.email===dataa.email && el.password===dataa.password){
-        const found=el;
-        return res.send(found);
-        }
-          })
-  }
-  catch(er){
-      console.log(er)
-  }
-
-
-  
-
-   return res.send("no user found")
-  
-});
-//check and login
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
-})
+});
+
+
+
+
+
+
+// store something
